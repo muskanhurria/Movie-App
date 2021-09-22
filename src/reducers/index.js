@@ -4,3 +4,4 @@ export default function movies(state = [], axction) {
     }
     return state;
 }                               //we do not modify existing state instead pass a new state which merges with old one in the store
+
