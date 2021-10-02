@@ -16,10 +16,11 @@ class MovieCard extends React.Component {
 
     render(){
         const { movie, isFavourite } = this.props;
+        console.log("movie card", movie);
         return (
             <div className="movie-card">
                 <div className="left">
-                    <img alt="movie-poster" src={MovieCard.Poster} />
+                    <img alt="movie-poster" src={movie.Poster} />
                 </div>
 
                 <div className="right">
