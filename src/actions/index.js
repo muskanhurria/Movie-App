@@ -9,7 +9,6 @@ export const ADD_SEARCH_RESULT = 'ADD_SEARCH_RESULT';
 
 //action creators
 export function addMovies (movies) {
-  console.log('action movie 12', movies)
     return{
         type: ADD_MOVIES,
         movies   //same as movies: movies
@@ -38,7 +37,6 @@ export function setShowFavourites(val){
 }
 
 export function addMovieToList(movie) {
-  console.log('line 41', movie);
   return {
     type: ADD_MOVIE_TO_LIST,
     movie
@@ -46,7 +44,6 @@ export function addMovieToList(movie) {
 }
 //batata hu
 export function addMovieSearchResult (movie) {
-  console.log(49, movie);
   return { 
     type: ADD_SEARCH_RESULT, 
     movie 
@@ -54,14 +51,12 @@ export function addMovieSearchResult (movie) {
 }
 
 export function handleMovieSearch (movie) {
-  console.log("handleMovieSearch 56", movie);
   const url = ` http://www.omdbapi.com/?i=tt3896198&apikey=add18289&t=${movie}`;
 
   return function (dispatch){
     fetch(url) 
     .then(response => response.json())   //this will convert response to json object and return a promise
     .then(movie => {
-      console.log('movie 63', movie);
 
       // dispatch an action
       dispatch(addMovieSearchResult(movie));

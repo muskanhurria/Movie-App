@@ -20,7 +20,6 @@ export function movies(state = initialMovieState, action) {
     //     }
     // }
     // return state;
-    console.log('action movie line 23', action.movie);
     switch (action.type) {
         case ADD_MOVIES:
             return {
@@ -51,7 +50,6 @@ export function movies(state = initialMovieState, action) {
             }
 
         case ADD_MOVIE_TO_LIST:
-            console.log('action.movie----', action.movie);
             return {
                 ...state,
                 list: [action.movie, ...state.list]
